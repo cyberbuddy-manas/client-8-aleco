@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
-    --primary: #B78D65;
-    --light: #F8F8F8;
+    --primary: #218d43;
+    --light: #ffffff;
     --dark: #252525;
 }
 
@@ -90,7 +90,7 @@ h6,
 }
 
 .btn-outline-body {
-    color: var(--primary);
+    color: rgba(255, 255, 255, 0.7);
     border-color: #777777;
 }
 
@@ -321,6 +321,10 @@ h6,
     z-index: -1;
 }
 
+.service-item {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
 .service-item .service-text {
     background: var(--light);
     transition: .5s;
@@ -339,12 +343,13 @@ h6,
 }
 
 .service-item .btn {
-    width: 40px;
+    width: 0px;
     height: 40px;
     display: inline-flex;
+    justify-content: center;
     align-items: center;
-    color: var(--dark);
-    background: #FFFFFF;
+    color: white;
+    background: #ffffff;
     white-space: nowrap;
     overflow: hidden;
     transition: .5s;
@@ -352,6 +357,7 @@ h6,
 
 .service-item:hover .btn {
     width: 140px;
+    color: #252525;
 }
 
 
