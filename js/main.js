@@ -10,8 +10,8 @@
         }, 1);
     };
     spinner();
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -24,8 +24,8 @@
             $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
         }
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -35,7 +35,7 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
 
@@ -79,6 +79,35 @@
         dotsData: true,
     });
 
-    
+
 })(jQuery);
 
+// Enquiry form index page
+
+// function fetchEnquiryIndex() {
+//     let user = document.getElementById('nameEI').value;
+//     let mail = document.getElementById('mailEI').value;
+//     let mobile = document.getElementById('mobileEI').value;
+//     let service = document.getElementById('serviceEI').value;
+//     let date = document.getElementById('dateEI').value;
+//     let time = document.getElementById('timeEI').value;
+//     let message = document.getElementById('messageEI').value;
+// }
+
+async function sendEnquiryIndex() {
+    let name = document.getElementById('nameEI').value;
+    let mail = document.getElementById('mailEI').value;
+    let mobile = document.getElementById('mobileEI').value;
+    let service = document.getElementById('serviceEI').value;
+    let date = document.getElementById('dateEI').value;
+    let time = document.getElementById('timeEI').value;
+    let message = document.getElementById('messageEI').value;
+
+    let data = {
+        name, mail, mobile, service, date, time, message
+    }
+
+    await emailjs.send("service_8t1ekpl", "template_4rg5tbc", data);
+
+    alert("Sent");
+}

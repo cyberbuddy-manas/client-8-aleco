@@ -189,6 +189,11 @@ h6,
     .header-carousel .owl-carousel-item p {
         font-size: 16px !important;
     }
+
+    .fb-iframe {
+        padding: 0 calc(var(--bs-gutter-x) / 2);
+        padding-right: 0;
+    }
 }
 
 .header-carousel .owl-dots {

@@ -714,6 +714,14 @@ progress {
     margin-top: var(--bs-gutter-y)
 }
 
+.foot .row {
+    margin-right: 0;
+}
+
+.foot .row>* {
+    padding-right: 0;
+}
+
 .col {
     flex: 1 0 0%
 }
