@@ -85,6 +85,23 @@ h6,
     opacity: 1;
 }
 
+#spinner img {
+    width: 700px;
+}
+
+@media (max-width: 800px) {
+    #spinner img {
+        width: 500px;
+    }
+}
+
+@media (max-width: 500px) {
+    #spinner img {
+        display: flex;
+        margin: auto;
+        width: 65%;
+    }
+}
 
 /*** Button ***/
 .btn {
@@ -190,6 +207,26 @@ h6,
         visibility: visible;
         transition: .5s;
         opacity: 1;
+    }
+}
+
+.logo-img-mob {
+    display: none;
+}
+
+@media (max-width: 400px) {
+    .logo-img {
+        display: none;
+    }
+
+    .logo-img-mob {
+        display: unset;
+        width: 50%;
+    }
+
+    .navbar-brand {
+        display: flex;
+        justify-content: center;
     }
 }
 
