@@ -71,6 +71,12 @@ h6,
     transform: translateY(-2px);
 }
 
+@media (max-width: 468px) {
+    .back-to-top {
+        zoom: 0.9;
+    }
+}
+
 /*** Spinner ***/
 #spinner {
     opacity: 0;
@@ -216,10 +222,10 @@ h6,
 
 @media (max-width: 400px) {
     .logo-img {
-        display: none;
+        width: 95%;
     }
 
-    .logo-img-mob {
+    /* .logo-img-mob {
         display: unset;
         width: 50%;
     }
@@ -227,7 +233,7 @@ h6,
     .navbar-brand {
         display: flex;
         justify-content: center;
-    }
+    } */
 }
 
 
