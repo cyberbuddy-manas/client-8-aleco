@@ -87,8 +87,7 @@
                 class="me-3 logo-img-mob" src="./img/icons/logo-aleco-doors-and-windows-mob.png" width="100%"
                 alt="Icon">
         </a>
-        <button type="button" style="margin: auto;" class="navbar-toggler me-4" data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse">
+        <button type="button" style="margin-left: 1.5rem;" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -180,25 +179,25 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control" id="nameEC" placeholder="Your Name">
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <input type="email" class="form-control" id="mailEC" placeholder="Your Email">
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control" id="subjectEC" placeholder="Subject">
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message"
+                                    <textarea class="form-control" placeholder="Leave a message here" id="messageEC"
                                         style="height: 200px"></textarea>
                                     <label for="message">Message</label>
                                 </div>
@@ -296,8 +295,31 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="https://wa.me/918146042285?text=Hey!%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+        class="btn btn-lg btn-primary btn-lg-square back-to-top"><img src="./img/whatsapp-aleco-windows-amritsar.png"
+            alt="aleco-whatsapp" /></a>
+    <div id="wa-box" class="wa-float back-to-top">
+        <i onclick="closeWA()" class="bi bi-x"></i>
+        <p>Let's chat about your dream project!</p>
+        <a href="https://wa.me/918146042285?text=Hey!%20I%20would%20like%20to%20know%20more%20about%20your%20services.">
+            Chat Now
+        </a>
+    </div>
 
+    <!-- Toast -->
+    <div id="toast">
+        <div id="txt1"></div>
+        <div id="txt2"></div>
+    </div>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("BD_-QEJnyCnmuX06n");
+        })();
+    </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -313,6 +335,12 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        function closeWA() {
+            document.getElementById("wa-box").style.visibility = "hidden";
+        }
+    </script>
 </body>
 
 </html>

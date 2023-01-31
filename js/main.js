@@ -89,6 +89,16 @@
 //     let message = document.getElementById('messageEI').value;
 // }
 
+function launch_toast(txt1, txt2) {
+    var x = document.getElementById("toast")
+    x.className = "show";
+    var text1 = document.getElementById("txt1");
+    var text2 = document.getElementById("txt2");
+    text1.innerHTML = txt1;
+    text2.innerHTML = txt2;
+    setTimeout(function () { x.className = x.className.replace("show", ""); }, 5000);
+}
+
 async function sendEnquiryIndex() {
     let name = document.getElementById('nameEI').value;
     let mail = document.getElementById('mailEI').value;
@@ -104,5 +114,20 @@ async function sendEnquiryIndex() {
 
     await emailjs.send("service_8t1ekpl", "template_4rg5tbc", data);
 
-    alert("Sent");
+    launch_toast("Awesome!", "Your Appointment is Booked.")
+}
+
+async function sendEnquiryContact() {
+    let name = document.getElementById('nameEC').value;
+    let mail = document.getElementById('mailEC').value;
+    let subject = document.getElementById('subjectEC').value;
+    let message = document.getElementById('messageEC').value;
+
+    let data = {
+        name, mail, subject, message
+    }
+
+    await emailjs.send("service_8t1ekpl", "template_4rg5tbc", data);
+
+    launch_toast("Awesome!", "We will contact you soon.")
 }

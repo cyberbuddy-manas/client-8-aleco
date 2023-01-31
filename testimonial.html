@@ -86,8 +86,7 @@
             <h1 class="text-primary m-0"><img class="me-3" src="img/icons/logo-aleco-doors-and-windows.png"
                     width="350px" alt="Icon"></h1>
         </a>
-        <button type="button" style="margin: auto;" class="navbar-toggler me-4" data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse">
+        <button type="button" style="margin-left: 1.5rem;" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -241,8 +240,16 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <a href="https://wa.me/918146042285?text=Hey!%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+        class="btn btn-lg btn-primary btn-lg-square back-to-top"><img src="./img/whatsapp-aleco-windows-amritsar.png"
+            alt="aleco-whatsapp" /></a>
+    <div id="wa-box" class="wa-float back-to-top">
+        <i onclick="closeWA()" class="bi bi-x"></i>
+        <p>Let's chat about your dream project!</p>
+        <a href="https://wa.me/918146042285?text=Hey!%20I%20would%20like%20to%20know%20more%20about%20your%20services.">
+            Chat Now
+        </a>
+    </div>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -258,6 +265,12 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        function closeWA() {
+            document.getElementById("wa-box").style.visibility = "hidden";
+        }
+    </script>
 </body>
 
 </html>

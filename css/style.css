@@ -753,3 +753,159 @@ h6,
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+/* Toast Message */
+#toast {
+    visibility: hidden;
+    max-width: 50px;
+    height: 50px;
+    /* margin-left: -125px; */
+    margin: auto;
+    background-color: #252525;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    font-size: 17px;
+    white-space: nowrap;
+}
+
+#toast #txt1 {
+    width: auto;
+    height: 50px;
+
+    float: left;
+
+    padding: 16px 10px;
+
+    box-sizing: border-box;
+
+    background-color: #196a33;
+    color: #fff;
+}
+
+#toast #txt2 {
+    color: #fff;
+    padding: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: toastfadein 0.5s, toastexpand 0.5s 0.5s, toaststay 3s 1s, toastshrink 0.5s 2s, toastfadeout 0.5s 2.5s;
+    animation: toastfadein 0.5s, toastexpand 0.5s 0.5s, toaststay 3s 1s, toastshrink 0.5s 4s, toastfadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes toastfadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes toastfadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes toastexpand {
+    from {
+        min-width: 50px
+    }
+
+    to {
+        min-width: 350px
+    }
+}
+
+@keyframes toastexpand {
+    from {
+        min-width: 50px
+    }
+
+    to {
+        min-width: 350px
+    }
+}
+
+@-webkit-keyframes toaststay {
+    from {
+        min-width: 350px
+    }
+
+    to {
+        min-width: 350px
+    }
+}
+
+@keyframes toaststay {
+    from {
+        min-width: 350px
+    }
+
+    to {
+        min-width: 350px
+    }
+}
+
+@-webkit-keyframes toastshrink {
+    from {
+        min-width: 350px;
+    }
+
+    to {
+        min-width: 50px;
+    }
+}
+
+@keyframes toastshrink {
+    from {
+        min-width: 350px;
+    }
+
+    to {
+        min-width: 50px;
+    }
+}
+
+@-webkit-keyframes toastfadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 60px;
+        opacity: 0;
+    }
+}
+
+@keyframes toastfadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 60px;
+        opacity: 0;
+    }
+}
