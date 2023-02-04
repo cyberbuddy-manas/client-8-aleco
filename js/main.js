@@ -108,13 +108,27 @@ async function sendEnquiryIndex() {
     let time = document.getElementById('timeEI').value;
     let message = document.getElementById('messageEI').value;
 
+    if (name == "" || mail == "" || mobile == "" || service == "" || date == "" || time == "" || message == "") {
+        return;
+    }
+
     let data = {
         name, mail, mobile, service, date, time, message
     }
 
-    await emailjs.send("service_8t1ekpl", "template_4rg5tbc", data);
+    // await emailjs.send("service_8t1ekpl", "template_4rg5tbc", data);
 
     launch_toast("Awesome!", "Your Appointment is Booked.")
+
+    setTimeout(() => {
+        document.getElementById('nameEI').value = '';
+        document.getElementById('mailEI').value = '';
+        document.getElementById('mobileEI').value = '';
+        document.getElementById('serviceEI').value = 'default';
+        document.getElementById('dateEI').value = '';
+        document.getElementById('timeEI').value = '';
+        document.getElementById('messageEI').value = '';
+    }, 1000)
 }
 
 async function sendEnquiryContact() {
@@ -123,6 +137,10 @@ async function sendEnquiryContact() {
     let subject = document.getElementById('subjectEC').value;
     let message = document.getElementById('messageEC').value;
 
+    if (name == "" || mail == "" || subject == "" || message == "") {
+        return;
+    }
+
     let data = {
         name, mail, subject, message
     }
@@ -130,4 +148,6 @@ async function sendEnquiryContact() {
     await emailjs.send("service_8t1ekpl", "template_xvphhuh", data);
 
     launch_toast("Awesome!", "We will contact you soon.")
+
+    setTimeout(() => { document.getElementById("contactForm").reset() }, 1000)
 }

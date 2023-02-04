@@ -270,6 +270,10 @@ h6,
         padding: 0 calc(var(--bs-gutter-x) / 2);
         padding-right: 0;
     }
+
+    .clearfix img {
+        width: 100%;
+    }
 }
 
 .header-carousel .owl-dots {

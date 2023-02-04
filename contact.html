@@ -175,35 +175,35 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form onsubmit="return false">
+                    <form id="contactForm" onsubmit="return false">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="nameEC" placeholder="Your Name">
+                                    <input type="text" required class="form-control" id="nameEC" placeholder="Your Name">
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="mailEC" placeholder="Your Email">
+                                    <input type="email" required class="form-control" id="mailEC" placeholder="Your Email">
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subjectEC" placeholder="Subject">
+                                    <input type="text" required class="form-control" id="subjectEC" placeholder="Subject">
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="messageEC"
+                                    <textarea class="form-control" required placeholder="Leave a message here" id="messageEC"
                                         style="height: 200px"></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                <button class="btn btn-primary w-100 py-3" onclick="sendEnquiryContact()" type="submit">Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -234,7 +234,7 @@
                     <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+91 8146 042 285</p>
                     <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@alecowindows.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
+                        <!-- <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a> -->
                         <a class="btn btn-square btn-outline-body me-1"
                             href="https://www.facebook.com/ecodoorswindows/"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-square btn-outline-body me-1"
