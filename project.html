@@ -147,14 +147,65 @@
     </div>
     <!-- Page Header End -->
 
+
+    <style>
+        .pro-img1 {
+            width: 45%;
+        }
+
+        .pro-desc {
+            width: 45%;
+        }
+
+        @media (max-width: 1200px) {
+            .pro-img1 {
+                width: 50%;
+            }
+
+            .container-custom {
+                padding: 0 50px;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .container-custom section {
+                flex-direction: column-reverse;
+            }
+
+            .pro-img1 {
+                width: 100%;
+                padding: 0 100px;
+            }
+
+            .pro-desc {
+                width: 80%;
+                margin: auto;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .container-custom {
+                padding: 0 15px;
+            }
+
+            .pro-img1 {
+                padding: 0 0px;
+            }
+
+            .pro-desc {
+                width: 100%;
+                margin: auto;
+            }
+        }
+    </style>
     <div class="container-xxl project py-5">
-        <div class="container">
+        <div class="container-custom">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h4 class="section-title">Our Experience</h4>
                 <h1 class="display-5 mb-4">We are leading the market!</h1>
             </div>
-            <section style="display: flex;gap: 30px;">
-                <div style="width: 60%;">
+            <section style="display: flex;gap: 30px;justify-content: space-around;">
+                <div class="pro-desc">
                     <p>Our doors and windows company is proud to have been a part of numerous <b>successful projects</b>
                         in the industry. Our team of experts is dedicated to providing <b>high-quality</b> products and
                         exceptional customer service. Some of our notable achievements include:
@@ -163,29 +214,35 @@
                                 windows
                                 to over 100 homes.</li>
 
-                            <li>Partnering with <b>leading contractors and architects</b> to deliver top-notch commercial
+                            <li>Partnering with <b>leading contractors and architects</b> to deliver top-notch
+                                commercial
                                 projects,
                                 including office buildings and shopping centers.</li>
 
-                            <li>Introducing <b>energy-efficient doors and windows</b>, which have been well-received by both
+                            <li>Introducing <b>energy-efficient doors and windows</b>, which have been well-received by
+                                both
                                 residential and commercial clients, resulting in lower energy costs and improved
                                 sustainability.</li>
 
-                            <li>Receiving <b>positive feedback from clients and industry professionals</b> for our attention to
+                            <li>Receiving <b>positive feedback from clients and industry professionals</b> for our
+                                attention to
                                 detail
                                 and commitment to meeting tight project deadlines.</li>
 
-                            <li>Expanding our product line to include a <b>wider range of materials, styles, and colors</b>, to
+                            <li>Expanding our product line to include a <b>wider range of materials, styles, and
+                                    colors</b>, to
                                 better
                                 meet the needs and preferences of our customers.</li>
                         </ul>
-                        We are committed to continuing to provide <b>top-quality products</b> and service to our clients and
+                        We are committed to continuing to provide <b>top-quality products</b> and service to our clients
+                        and
                         look
                         forward to many more successful projects in the future.
                     </p>
                 </div>
-                <div>
-                    <img width="100%" src="https://fakeimg.pl/500x400" alt="">
+                <div class="pro-img1">
+                    <img width="100%" style="border: 8px solid #218d43;" src="./img/aleco-windows-client.png"
+                        title="Singh Dental Clinic Aleco Windows" alt="singh-dental-clinic-aleco-windows">
                 </div>
             </section>
         </div>
