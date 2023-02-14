@@ -116,7 +116,7 @@ async function sendEnquiryIndex() {
         name, mail, mobile, service, date, time, message
     }
 
-    // await emailjs.send("service_8t1ekpl", "template_4rg5tbc", data);
+    await emailjs.send("service_8t1ekpl", "template_4rg5tbc", data);
 
     launch_toast("Awesome!", "Your Appointment is Booked.")
 
